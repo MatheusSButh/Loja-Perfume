@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Pesquisa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <header>
+        <div class="container">
+            <h1 class="my-4">Loja de Perfumes - Resultados da Pesquisa</h1>
+        
+            <nav>
+                <ul class="nav" style="list-style-type: none; padding-left: 0;">
+                    <li style="display: inline; margin-right: 15px;"><a href="index.html" class="text-decoration-none">Início</a></li>
+                    <li style="display: inline; margin-right: 15px;"><a href="produtos.html" class="text-decoration-none">Produtos</a></li>
+                    <li style="display: inline; margin-right: 15px;"><a href="sobre.html" class="text-decoration-none">Sobre Nós</a></li>
+                    <li style="display: inline;"><a href="contato.html" class="text-decoration-none">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <div class="container">
+            <h2 class="my-4">Resultados para: <span id="query"></span></h2>
+            <div id="resultados" class="list-group"></div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container text-center">
+            <p class="my-4">&copy; 2024 Loja de Perfumes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const searchQuery = params.get('search');
+
+        
+        document.getElementById('query').textContent = searchQuery;
+
+        
+        const produtos = [
+            { nome: "Perfume Amadeirado", categoria: "Amadeirado" },
+            { nome: "Perfume Floral", categoria: "Floral" },
+            { nome: "Perfume Frutado", categoria: "Frutado" },
+            { nome: "Perfume Cítrico", categoria: "Cítrico" },
+            { nome: "Perfume Oriental", categoria: "Oriental" },
+            { nome: "Perfume Especiado", categoria: "Especiado" }
+        ];
+
+       
+        const resultados = produtos.filter(produto => 
+            produto.nome.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+
+
+const resultadosContainer = document.getElementById('resultados');
+
+if (resultados.length > 0) {
+    resultados.forEach(produto => {
+        const item = document.createElement('a');
+        item.href = 'produtos.html'; 
+        item.classList.add('list-group-item', 'list-group-item-action');
+        item.textContent = produto.nome;
+        resultadosContainer.appendChild(item);
+    });
+} else {
+    const noResults = document.createElement('p');
+    noResults.textContent = 'Nenhum resultado encontrado para sua pesquisa.';
+    resultadosContainer.appendChild(noResults);
+}
+</script>
+
+<!-- Scripts do Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

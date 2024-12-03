@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Loja de Perfumes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-primary text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="mb-0">Loja de Perfumes</h1>
+            <!-- Barra de navegação com Bootstrap -->
+            <nav class="d-flex align-items-center">
+                <ul class="nav mb-0">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link text-white">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="produtos.html" class="nav-link text-white">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link text-white">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link text-white">Contato</a>
+                    </li>
+                </ul>
+                <!-- Barra de Busca -->
+                <form action="pesquisa.html" method="get" class="d-flex mt-4">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar perfumes..." aria-label="Pesquisar" name="search" required>
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+
+            </nav>
+        </div>
+    </header>
+    
+
+    <section class="produtos">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="product-grid">
+                <!-- Amadeirados -->
+                <div class="product-item">
+                    <img src="img/imgtronco.jpeg" alt="Perfume Amadeirado">
+                    <h3>Perfume Amadeirado de tronco</h3>
+                    <p>R$140,00</p>
+                    <div class="btn-container">
+                        <a href="pagamento.html?produto=Perfume%20Amadeirado%201&preco=120" class="btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="img/imgfolha.jpeg" alt="Perfume Amadeirado">
+                    <h3>Perfume Amadeirado de folhas</h3>
+                    <p>R$160,00</p>
+                    <div class="btn-container">
+                        <a href="pagamento.html?produto=Perfume%20Amadeirado%202&preco=140" class="btn">Comprar</a>
+                    </div>
+                </div>
+
+                <!-- Florais -->
+                <div class="product-item">
+                    <img src="img/img2.jpeg" alt="Perfume Floral">
+                    <h3>Perfume Floral de rosas</h3>
+                    <p>R$150,00</p>
+                    <div class="btn-container">
+                        <a href="pagamento.html?produto=Perfume%20Floral%201&preco=150" class="btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="img/imgmarguerita.jpeg" alt="Perfume Floral">
+                    <h3>Perfume Floral de marguerita</h3>
+                    <p>R$160,00</p>
+                    <div class="btn-container">
+                        <a href="pagamento.html?produto=Perfume%20Floral%202&preco=160" class="btn">Comprar</a>
+                    </div>
+                </div>
+
+                <!-- Frutados -->
+                <div class="product-item">
+                    <img src="img/imgmorango.jpeg" alt="Perfume Frutado">
+                    <h3>Perfume Frutado de morango</h3>
+                    <p>R$110,00</p>
+                    <div class="btn-container">
+                        <a href="pagamento.html?produto=Perfume%20Frutado%201&preco=110" class="btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="img/img6.jpeg" alt="Perfume Frutado">
+                    <h3>Perfume Especiado de crumeta</h3>
+                    <p>R$160,00</p>
+                    <div class="btn-container">
+                        <a href="pagamento.html?produto=Perfume%20Frutado%202&preco=130" class="btn">Comprar</a>
+                    </div>
+                </div>
+
+                <!-- Outros Produtos -->
+                <div class="product-item">
+                    <img src="img/imggirassol.jpeg" alt="Perfume Floral">
+                    <h3>Perfume Floral de girassol</h3>
+                    <p>R$170,00</p>
+                    <div class="btn-container">
+                        <a href="pagamento.html?produto=Perfume%20Floral%203&preco=170" class="btn">Comprar</a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="img/imgmelancia.jpeg" alt="Perfume Frutado">
+                    <h3>Perfume Frutado de morango com dose de melancia</h3>
+                    <p>R$140,00</p>
+                    <div class="btn-container">
+                        <a href="pagamento.html?produto=Perfume%20Frutado%203&preco=140" class="btn">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Loja de Perfumes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
